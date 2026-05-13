@@ -1,0 +1,243 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f1ec;
+  --ink: #201816;
+  --muted: #725f58;
+  --panel: #fffaf6;
+  --line: rgba(67, 45, 36, 0.12);
+  --accent: #9f4f42;
+  --accent-strong: #71372f;
+  --sage: #6f8066;
+  --gold: #c78d4f;
+  --shadow: 0 16px 40px rgba(68, 48, 38, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(199, 141, 79, 0.24), transparent 30%),
+    linear-gradient(180deg, #fbf5ef 0%, var(--bg) 100%);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: max(18px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+}
+
+.hero {
+  min-height: 180px;
+  padding: 18px 4px 10px;
+}
+
+.hero__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: rgba(255, 250, 246, 0.72);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.icon-button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 250, 246, 0.8);
+  color: var(--ink);
+  font-size: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 420px;
+  font-size: 42px;
+  line-height: 0.98;
+  font-weight: 760;
+}
+
+.hero p {
+  max-width: 430px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.panel {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 246, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.progress-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.eyebrow {
+  color: var(--sage);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 4px;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.body-copy {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.progress {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(113, 55, 47, 0.12);
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.primary,
+.secondary,
+.ghost {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 750;
+}
+
+.primary {
+  color: #fffaf6;
+  background: var(--accent-strong);
+}
+
+.secondary {
+  margin-top: 12px;
+  color: #fffaf6;
+  background: var(--sage);
+}
+
+.ghost {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  color: var(--accent-strong);
+  background: transparent;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tile {
+  min-height: 106px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 246, 0.76);
+  color: var(--ink);
+  text-align: left;
+  box-shadow: 0 10px 26px rgba(68, 48, 38, 0.08);
+}
+
+.tile span {
+  display: block;
+  font-size: 18px;
+  font-weight: 780;
+}
+
+.tile small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.32;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  line-height: 1.35;
+}
+
+body.dark {
+  --bg: #151716;
+  --ink: #fff8ef;
+  --muted: #d0beb2;
+  --panel: #20221f;
+  --line: rgba(255, 248, 239, 0.14);
+  --accent: #d38a74;
+  --accent-strong: #c96d5a;
+  --sage: #a8bd95;
+  --gold: #d9aa69;
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(211, 138, 116, 0.2), transparent 30%),
+    linear-gradient(180deg, #1e211e 0%, var(--bg) 100%);
+}
+
+body.dark .panel,
+body.dark .tile,
+body.dark .status,
+body.dark .icon-button {
+  background: rgba(32, 34, 31, 0.9);
+}
+
+body.dark textarea {
+  background: #151716;
+}
