@@ -13,6 +13,7 @@ const actions = {
   tea: { type: "branch", key: "tea" },
   relationship: { type: "branch", key: "relationship" },
   ziso_intro: { type: "branch", key: "ziso_intro" },
+  archetypes: { type: "archetypes" },
 };
 
 document.querySelectorAll("[data-action]").forEach((button) => {
